@@ -18,9 +18,16 @@ function make2DArray(cols, rows) {
 // The grid
 let grid;
 // How big is each square?
-let w = 5;
+let w = 1;
 let cols, rows;
 let hueValue = 200;
+// Counter to remove a row of sand
+let cont = 0;
+let frequency = 100;
+
+// Window sizes
+var screen_w = window.innerWidth;
+var screen_h = window.innerHeight;  
 
 // Check if a row is within the bounds
 function withinCols(i) {
@@ -33,19 +40,19 @@ function withinRows(j) {
 }
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(screen_w, screen_h);
   colorMode(HSB, 360, 255, 255);
   cols = width / w;
   rows = height / w;
   grid = make2DArray(cols, rows);
 }
 
-function mouseDragged() {
+function mouseMoved() {
   let mouseCol = floor(mouseX / w);
   let mouseRow = floor(mouseY / w);
   
   // Randomly add an area of sand particles
-  let matrix = 5;
+  let matrix = 10;
   let extent = floor(matrix / 2);
   for (let i = -extent; i <= extent; i++) {
     for (let j = -extent; j <= extent; j++) {
@@ -121,10 +128,29 @@ function draw() {
           nextGrid[i - dir][j + 1] = state;
         // Stay put!
         } else {
-          nextGrid[i][j] = state;
+          if (cont === frequency) {
+            // If is the 5th time, remove a row
+            if (j != rows) {
+              nextGrid[i][j+1] = state;
+            }
+          } else {
+            // Otherwise keep
+            nextGrid[i][j] = state;
+          }
         }
       }
     }
   }
+  if (cont === frequency) {
+    cont = 0;
+  }
+  cont = cont + 1;
   grid = nextGrid;
+}
+
+window.onresize = function() {
+  // assigns new values for width and height variables
+  screen_w = window.innerWidth;
+  screen_h = window.innerHeight;  
+  canvas.size(screen_w, screen_h);
 }
