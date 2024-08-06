@@ -173,7 +173,7 @@ function make2DArray(cols, rows, pixel_width) {
 // The grid
 let grid;
 // How big is each square?
-let w = 5;
+let w = 10;
 if (w > 10){
   // Maximum square size of 10
   w = 10
