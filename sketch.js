@@ -165,18 +165,18 @@ function make2DArray(cols, rows, pixel_width) {
     }
   }
   
-  written_arr = writeName(arr, cols, rows, pixel_width)
+  // arr = writeName(arr, cols, rows, pixel_width)
   
-  return written_arr;
+  return arr;
 }
 
 // The grid
 let grid;
 // How big is each square?
-let w = 10;
-if (w > 10){
-  // Maximum square size of 10
-  w = 10
+let w = 30;
+if (w > 30){
+  // Maximum square size of 20
+  w = 30
 }
 
 // Define Word area
