@@ -188,7 +188,7 @@ let hueValue = 200;
 
 // Counter to remove last row of sand
 let cont = 0;
-let frequency = 25;
+let frequency = 50;
 
 // Check if a row is within the bounds
 function withinCols(i) {
