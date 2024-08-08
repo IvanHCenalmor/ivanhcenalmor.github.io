@@ -322,7 +322,7 @@ function draw() {
 function mousePressed() {
   if (min_word_x < mouseX && mouseX < max_word_x) {
     if (min_word_y < mouseY && mouseY < max_word_y) {
-      window.open("https://ivanhcenalmor.github.io/hello.html");
+      window.open("https://ivanhcenalmor.github.io/snake.html");
     }
   }
 }
