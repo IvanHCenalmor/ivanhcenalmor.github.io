@@ -29,9 +29,6 @@ function onList(list, x, y) {
   return false;
 }
 
-// Show the moving keys on a message
-confirm("Welcome to the snake game!\nThis are the controls:\nA - Left\nD - Right\nW - Up\sS - Donw\nEnjoy!");
-
 // Define the grid
 let grid;
 
@@ -65,6 +62,9 @@ let snake_pos_x, snake_pos_y;
 
 // Initialize the canvas and all the process
 function setup() {
+  // Show the moving keys on a message
+  confirm("Welcome to the snake game!\nThis are the controls:\nA - Left\nD - Right\nW - Up\sS - Donw\nEnjoy!");
+  
   // Define the grid size
   cols = round(window.innerWidth/w) - 1;
   rows = round(window.innerHeight/w) - 1;
