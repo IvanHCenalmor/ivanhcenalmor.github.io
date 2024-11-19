@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="/api/placeholder/150/150" alt="Profile Picture" class="profile-img">
+        <h1>Your Name</h1>
+        <p>Software Developer | Artist</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
 
-  </head>
-  <body>
-    <main>
-    </main>
-    <script src="games/rainbow/rainbow.js"></script>
-  </body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#art">Art Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="content"></div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="content"></div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills"></div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="content"></div>
+        </section>
+
+        <section id="art">
+            <h2>Art Gallery</h2>
+            <div class="content"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
 </html>
