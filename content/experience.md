@@ -1,6 +1,1 @@
-## Work History
-
-### Senior Software Developer at TechCorp
-
-
----
+## Professional experience

@@ -1,4 +1,3 @@
 # About Me
 
-
----
+Computer scientist, expert in deep learning and computer vision. Enthusiastic about applying these advanced processing techniques to biomedical and microbiology research. Eager to pursue a PhD, where I can bring my computational knowledge into interdisciplinary scientific research and continue developing my biomedical knowledge and computer science skills. Always open to exploring novel ideas and engaging in innovative research with real-world impact.

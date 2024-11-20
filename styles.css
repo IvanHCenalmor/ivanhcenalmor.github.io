@@ -269,6 +269,11 @@ h1, h2, h3 {
   transform: scale(1.05);
 }
 
+.gallery-item h3 {   
+  padding: 0 1.5rem;  /* Add some horizontal padding */
+}
+
+
 .gallery-content {
   padding: 1.5rem;
 }
