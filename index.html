@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iván Hidalgo-Cenalmor - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <!-- Add Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Add Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -14,43 +16,47 @@
         <h1>Iván Hidalgo-Cenalmor</h1>
         <p>Software Developer</p>
         <div class="social-links">
-            <a href="https://github.com/IvanHCenalmor"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/ivan-hidalgo-cenalmor"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/IvanHCenalmor" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/ivan-hidalgo-cenalmor" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:ivanhcenalmor@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#art">Art Gallery</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#art" class="nav-link">Art Gallery</a></li>
         </ul>
     </nav>
 
-    <div class="container">
-        <section id="about">
+    <main class="container">
+        <section id="about" class="section">
             <div class="content"></div>
         </section>
 
-        <section id="experience">
+        <section id="experience" class="section">
             <div class="content"></div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="section">
             <div class="skills"></div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="section">
             <div class="content"></div>
         </section>
 
-        <section id="art">
+        <section id="art" class="section">
             <div class="content"></div>
         </section>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Iván Hidalgo-Cenalmor. All rights reserved.</p>
+    </footer>
 
     <script src="main.js"></script>
 </body>
