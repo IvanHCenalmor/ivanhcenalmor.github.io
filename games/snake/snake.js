@@ -62,9 +62,6 @@ let snake_pos_x, snake_pos_y;
 
 // Initialize the canvas and all the process
 function setup() {
-  // Show the moving keys on a message
-  confirm("Welcome to the snake game!\nThis are the controls:\nA - Left\nD - Right\nW - Up\sS - Donw\nEnjoy!");
-  
   // Define the grid size
   cols = round(window.innerWidth/w) - 1;
   rows = round(window.innerHeight/w) - 1;
@@ -74,6 +71,9 @@ function setup() {
   frameRate(15);
   colorMode(RGB, 255, 255, 255);
   
+  // Show the moving keys on a message
+  alert("Welcome to the snake game!\nThis are the controls:\nA - Left\nD - Right\nW - Up\sS - Donw\nEnjoy!");
+
   // Initialize the snake in the middle of the canvas
   snake = [];
   random_col = floor(cols/2);
