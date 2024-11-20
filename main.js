@@ -1,3 +1,16 @@
+const fs = require('fs')
+const path = require('path'); 
+
+// Iterate trough a skills folder
+async function lsSkills(path) {
+  const dir = await fs.promises.opendir(path)
+  for await (const dirent of dir) {
+    skills_path = path.join(path, dirent.name);
+    loadSkills(skills_path);
+  }
+}
+
+
 // Load markdown content for a specific section
 async function loadMarkdownContent(file, elementId) {
     try {
@@ -11,9 +24,9 @@ async function loadMarkdownContent(file, elementId) {
 }
 
 // Load skills from JSON
-async function loadSkills() {
+async function loadSkills(dataPath) {
     try {
-        const response = await fetch('data/skills.json');
+        const response = await fetch(dataPath);
         const skills = await response.json();
         const skillsContainer = document.querySelector('#skills .skills');
         
@@ -43,7 +56,7 @@ function showSection(sectionId) {
         
         // Load content if needed
         if (sectionId === 'skills') {
-            loadSkills();
+            lsSkills('./data/skills');
         } else {
             loadMarkdownContent(sectionId, sectionId);
         }
