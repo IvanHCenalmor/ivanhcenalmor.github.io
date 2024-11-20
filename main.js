@@ -6,7 +6,66 @@ async function loadMarkdownContent(file, elementId) {
         const text = await response.text();
         const element = document.querySelector(`#${elementId} .content`);
         if (element) {
-            element.innerHTML = marked.parse(text);
+            // Split the markdown into sections
+            const sections = text.split(/\n(?=#{1,2} )/).filter(section => section.trim());
+            
+            // Create sub-navigation
+            const subNav = document.createElement('nav');
+            subNav.className = 'sub-navigation';
+            const subNavList = document.createElement('ul');
+            
+            // Create a container for the sections
+            const sectionsContainer = document.createElement('div');
+            sectionsContainer.className = 'markdown-sections';
+            
+            sections.forEach((section, index) => {
+                // Extract the heading
+                const headingMatch = section.match(/^(#{1,2})\s+(.+)/);
+                if (headingMatch) {
+                    const headingLevel = headingMatch[1].length;
+                    const headingText = headingMatch[2].trim();
+                    
+                    // Create sub-nav item
+                    const navItem = document.createElement('li');
+                    const navLink = document.createElement('a');
+                    navLink.href = `#section-${index}`;
+                    navLink.textContent = headingText;
+                    navItem.appendChild(navLink);
+                    subNavList.appendChild(navItem);
+                    
+                    // Create section div
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.className = 'markdown-section';
+                    sectionDiv.id = `section-${index}`;
+                    sectionDiv.innerHTML = marked.parse(section);
+                    sectionsContainer.appendChild(sectionDiv);
+                }
+            });
+            
+            subNav.appendChild(subNavList);
+            
+            // Clear and rebuild content
+            element.innerHTML = '';
+            element.appendChild(subNav);
+            element.appendChild(sectionsContainer);
+            
+            // Add sub-navigation click handling
+            subNav.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    e.preventDefault();
+                    const targetId = e.target.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                        
+                        // Update active state
+                        subNav.querySelectorAll('a').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        e.target.classList.add('active');
+                    }
+                }
+            });
         }
     } catch (error) {
         console.error(`Error loading ${file}.md:`, error);

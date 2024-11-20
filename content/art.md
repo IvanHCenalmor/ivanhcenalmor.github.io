@@ -2,6 +2,8 @@
 
 Welcome to my digital art collection! Here you'll find a selection of my artwork, ranging from digital illustrations to experimental pieces.
 
+## Comic style drawings
+
 <div class="gallery">
   <div class="gallery-item">
     <a href="images/art/Kiss_or_Punch.png">

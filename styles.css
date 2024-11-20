@@ -1,5 +1,6 @@
 :root {
   --primary-color: #2d333b;
+  --dark-primary-color: #0000001d;
   --secondary-color: #22272e;
   --text-color: #adbac7;
   --accent-color: #539bf5;
@@ -279,6 +280,46 @@ h1, h2, h3 {
 }
 
 /* Markdown Content Styles */
+
+.markdown-sections {
+  display: grid;
+  gap: 2rem;
+}
+
+.markdown-section {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed);
+}
+
+.markdown-section:hover {
+  transform: translateY(-5px);
+}
+
+.markdown-section h1,
+.markdown-section h2 {
+  margin-top: 0;
+}
+
+
+.markdown-content {
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all var(--transition-speed);
+  box-shadow: var(--card-shadow);
+  margin-top: 20px;
+}
+
+
+.markdown-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .content {
   color: var(--text-color);
 }
@@ -438,4 +479,49 @@ footer {
 .experience-entry ul {
     padding-left: 1.5rem;
     margin-top: 1rem;
+}
+
+/* Sub-navigation style */
+
+.sub-navigation {
+  background-color: var(--dark-primary-color);
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.sub-navigation ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-navigation li {
+  flex: 1;
+}
+
+.sub-navigation a {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-speed);
+}
+
+.sub-navigation a:hover {
+  background-color: rgba(83, 155, 245, 0.1);
+  color: var(--accent-color);
+}
+
+.sub-navigation a.active {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  color: white;
+}
+
+/* Smooth scroll behavior for section navigation */
+html {
+  scroll-behavior: smooth;
 }
