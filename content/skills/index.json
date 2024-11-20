@@ -1,0 +1,20 @@
+{
+    "categories": [
+        {
+            "name": "Programmatic Skills",
+            "file": "programatic_skills.json"
+        },
+        {
+            "name": "Hard Skills",
+            "file": "hard_skills.json"
+        },
+        {
+            "name": "Image Analysis Tools",
+            "file": "image_analysis_tools.json"
+        },
+        {
+            "name": "Soft Skills",
+            "file": "soft_skills.json"
+        }
+    ]
+}

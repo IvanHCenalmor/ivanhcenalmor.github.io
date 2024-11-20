@@ -171,10 +171,25 @@ h1, h2, h3 {
   transform: translateY(-3px);
 }
 
-.skills {
+/* Skills style */
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(83, 155, 245, 0.2);
+}
+
+.skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .skill-tag {
@@ -184,6 +199,25 @@ h1, h2, h3 {
   font-size: 0.95rem;
   transition: all var(--transition-speed);
   border: 1px solid rgba(83, 155, 245, 0.2);
+  position: relative;
+}
+
+/* Skill levels */
+.skill-tag[data-level="expert"] {
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--primary-color), rgba(83, 155, 245, 0.2));
+}
+
+.skill-tag[data-level="advanced"] {
+  border-color: rgba(83, 155, 245, 0.6);
+}
+
+.skill-tag[data-level="intermediate"] {
+  border-color: rgba(83, 155, 245, 0.4);
+}
+
+.skill-tag[data-level="beginner"] {
+  border-color: rgba(83, 155, 245, 0.2);
 }
 
 .skill-tag:hover {
@@ -191,6 +225,19 @@ h1, h2, h3 {
   box-shadow: 0 4px 12px rgba(83, 155, 245, 0.2);
   border-color: var(--accent-color);
 }
+
+/* Error message styling */
+.error {
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  margin: 1rem 0;
+}
+
+
+/* Art Gallery style */
 
 .gallery {
   display: grid;
