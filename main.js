@@ -78,60 +78,8 @@ function showInitialSection() {
     showSection(hash);
 }
 
-// Like system functionality
-function initializeLikeSystem() {
-    // Load likes from localStorage
-    const likes = JSON.parse(localStorage.getItem('artLikes') || '{}');
-    
-    // Add click handlers to all like buttons
-    document.querySelectorAll('.like-button').forEach(button => {
-        const artId = button.dataset.artId;
-        const likeCount = likes[artId] || 0;
-        
-        // Update initial like count
-        updateLikeDisplay(button, likeCount);
-        
-        button.addEventListener('click', () => {
-            // Toggle like status
-            const currentLikes = likes[artId] || 0;
-            const newLikes = currentLikes + 1;
-            likes[artId] = newLikes;
-            
-            // Save to localStorage
-            localStorage.setItem('artLikes', JSON.stringify(likes));
-            
-            // Update display
-            updateLikeDisplay(button, newLikes);
-            
-            // Add animation class
-            button.classList.add('liked');
-            setTimeout(() => button.classList.remove('liked'), 700);
-        });
-    });
-}
-
-function updateLikeDisplay(button, count) {
-    const countDisplay = button.querySelector('.like-count');
-    countDisplay.textContent = count;
-    button.setAttribute('title', `${count} likes`);
-}
-
-// Add to the initialization
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     initializeNavigation();
     showInitialSection();
-    
-    // Initialize like system when art section is shown
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.type === 'childList' && document.querySelector('.gallery')) {
-                initializeLikeSystem();
-            }
-        });
-    });
-    
-    observer.observe(document.querySelector('#art .content'), {
-        childList: true,
-        subtree: true
-    });
 });
