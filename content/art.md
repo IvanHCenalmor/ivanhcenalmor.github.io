@@ -4,29 +4,32 @@ Welcome to my digital art collection! Here you'll find a selection of my artwork
 
 <div class="gallery">
   <div class="gallery-item">
-    <img src="images/art/artwork1.jpg" alt="Abstract Digital Art 1">
+    <a href="images/art/Kiss_or_Punch.png">
+        <img src="images/art/Kiss_or_Punch.png" alt="Kiss or Punch" style="width: 500px; height: 250px;">
+    </a>
     <div class="gallery-content">
-      <span class="date">January 2024</span>
-      <h3>Abstract Composition</h3>
-      <p>A digital exploration of form and color using generative algorithms.</p>
+      <span class="date">November 2024</span>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <a href="images/art/Deathstroke_Ready_to_Love.png">
+        <img src="images/art/Deathstroke_Ready_to_Love.png" alt="Deathstroke is ready to love" style="width: 500px; height: 250px;">
+    </a>
+    <div class="gallery-content">
+      <span class="date">July 2024</span>
     </div>
   </div>
   
-  <div class="gallery-item">
-    <img src="images/art/artwork2.jpg" alt="Digital Landscape 1">
-    <div class="gallery-content">
-      <span class="date">February 2024</span>
-      <h3>Digital Landscape</h3>
-      <p>A procedurally generated landscape inspired by natural formations.</p>
-    </div>
-  </div>
   
   <div class="gallery-item">
-    <img src="images/art/artwork3.jpg" alt="Geometric Pattern">
+    <a href="images/art/You_Have_No_Idea.png">
+        <img src="images/art/You_Have_No_Idea.png" alt="You Have No Idea" style="width: 500px; height: 250px;">
+    </a>
     <div class="gallery-content">
-      <span class="date">March 2024</span>
-      <h3>Geometric Patterns</h3>
-      <p>An exploration of mathematical patterns and symmetry.</p>
+      <span class="date">July 2024</span>
+      <!--  <h3>Geometric Patterns</h3> -->
+      <!--  <p>An exploration of mathematical patterns and symmetry.</p> -->
     </div>
   </div>
-</div># Art Gallery
+</div>
