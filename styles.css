@@ -118,6 +118,20 @@ nav a:hover::after {
   width: 100%;
 }
 
+a {
+  color: var(--accent-color); /* Uses the accent color from the existing color palette */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+a:visited {
+  color: color-mix(in srgb, var(--accent-color) 80%, white); /* Slightly lighter version of accent color */
+  opacity: 0.8; /* Slightly faded to indicate visited state */
+}
+
 section {
   margin: 3rem 0;
   padding: 2.5rem;
