@@ -1,5 +1,16 @@
 ## Education
 
+
+<div class="markdown-content">
+  <h4>Doctor of Philosophy (PhD) in Science and Information Technology </h4>
+  <i class="fa-solid fa-calendar-days"></i> 2025 ‐ 2027
+  <i class="fa-solid fa-location-dot"></i>  Åbo Akademi University  <br/>
+  <i class="fa-solid fa-book"></i> <b>PhD Project:</b> <br />
+  <ul>
+    <li><b>Supervisors:</b> Guillaume Jacquemet (Åbo Akademi) and Diana Toivola (Åabo Akademi)</li>
+  </ul>
+</div>
+
 <div class="markdown-content">
   <h4>Master's Degree (MSc) in Computer Engineering and Intelligent Systems</h4>
   <i class="fa-solid fa-calendar-days"></i> 2021 ‐ 2023

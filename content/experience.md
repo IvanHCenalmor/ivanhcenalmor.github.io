@@ -14,7 +14,7 @@
   <h4>Internship, Biomedical Artificial Vision: Deep Learning‐Based Super Resolution</h4>
   <i class="fa-solid fa-calendar-days"></i> 2022 – 2023
   <i class="fa-solid fa-location-dot"></i> Donosti International Physics Centre (DIPC), San Sebastian, Spain <br />
-  <i class="fa-solid fa-user"></i> <b>Supervisor:</b> Ignacio Arganda‐Carreras (UPV/EHU) <br />
+  <i class="fa-solid fa-user"></i> <b>Supervisor:</b> Prof. Ignacio Arganda‐Carreras (UPV/EHU) <br />
   <i class="fa-solid fa-list-check"></i> <b>Main responsibilities:</b> Advanced my Master’s thesis and presented it at a conference.
 </div>
 
